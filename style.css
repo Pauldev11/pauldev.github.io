@@ -1,0 +1,348 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background: #222;
+    margin: 0px 50px;
+    overflow-x: hidden;
+}
+
+nav{
+    background-color: #222;
+    color: #fff;
+    padding: 5px 0;
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+.logo{
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.menu li{
+    margin: 0 15px;
+}
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+}
+.menu a :hover{
+   color: rgba(231, 165, 21, 0.938);
+}
+.menu-icon{
+    display: none;
+}
+/* mobile view*/
+@media(max-width: 767px){
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background: #7e7e7e;
+        text-align: center;
+        z-index: 1;
+    }
+    .menu li{
+        margin: 10px 0;
+    }
+    .menu-icon{
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .menu-toggle{
+        position: relative;
+    }
+    .menu-toggle.active .menu{
+        display: flex;
+    }
+   .right-text img{
+    margin-top: -70px;
+   }
+
+   
+  .scroll{
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: #222;
+  height: 19rem;
+  margin-top: -100px;
+}
+.content a{
+    text-decoration: none;
+    text-align: center;
+    font-size:0.8rem;
+    font-weight: 500;
+    color: #fff;
+    transition: 1s;
+}
+.content .btn{
+  background:#66ff00 ;
+  padding: 10px 20px;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.37);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeinup 1s forwards;
+}
+.content .btn2{
+  background: #333;
+  padding: 10px 15px;
+  border-radius: 7px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.37);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeinup 1s forwards;
+
+}
+
+
+
+.flex-content{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeinup 1s forwards;
+
+  }
+  .left-text{
+    flex: 1;
+    text-align:justify;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeinup 1s forwards;
+  }
+  .left-text h2{
+    color:#66ff00;
+    font-size: 22px;
+    font-weight: 750;
+  }
+
+  .right-text{
+    flex: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeinup 1s forwards;
+  }
+
+
+  .card {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+  }
+
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .img{
+    margin-right: 50px;
+  }
+  
+img{
+    max-width:90%;
+     
+}  
+  @media screen and (max-width:600px) {
+    .flex-content{
+        flex-direction: column;
+    }
+  }
+
+  @keyframes fadeinup {
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .whatsapp{
+    width: 20px;
+
+  }
+  .whatsappcontainer{
+    width: 52px;
+    height: 52px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+  }
+  .ggs{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    position:relative;
+  }
+
+  .get-offer{
+    align-items: center;
+    text-align: center;
+  }
+
+  .get-offer p{
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-weight: 100;
+  }
+
+  .get-offer h2{
+    font-weight: 600;
+  }
+
+  footer{
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+
+
+
+
+
+  /* portfolio*/
+
+  .head{
+    text-align: center;
+    padding: 1rem;
+    background-color: #35424a;
+  }
+
+  .box{
+    max-width: 800px;
+    margin: 2rem, auto;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+  }
+  .section h2{
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .section p{
+     margin-bottom: 2rem;
+     line-height: 1.6;
+     color: #333;
+     font-size: 0.9rem;
+  }
+  .section{
+    margin-bottom: 2rem;
+  }
+  .exprience {
+    color: #666666;
+  }
+  .contact{
+    display: flex;
+    justify-content: space-between;
+    background-color: #35424a;
+    color: #fff;
+    padding: 1rem;
+  }
+
+  .contact a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  .items{
+    display: inline-block;
+
+  }
+  
+  
